@@ -1,5 +1,3 @@
----
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: thinkcentre-m80q
 description: a custom fedora atomic (kionite) distro for my desktop of choice
 base-image: ghcr.io/ublue-os/kionite-main
@@ -18,7 +16,6 @@ modules:
     repos:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-
     install:
       packages:
         - hyfetch
@@ -36,7 +33,6 @@ modules:
         - okular
         - gwenview
         - gnome-disk-utility
-
     remove:
       packages:
         - firefox
@@ -53,18 +49,14 @@ modules:
     configurations:
       - notify: false
         scope: system
-
         remotes:
           - name: flathub
             url: https://dl.flathub.org/repo/flathub.flatpakrepo
-
           - name: fedora
             url: https://registry.fedoraproject.org
             type: oci
             gpg-verify: false
-
         install:
-          - 
           - com.github.tchx84.Flatseal
           - it.mijorus.gearlever
           - com.usebottles.bottles
