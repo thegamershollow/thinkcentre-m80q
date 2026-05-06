@@ -1,6 +1,6 @@
 name: thinkcentre-m80q
 description: a custom fedora atomic (kionite) distro for my desktop of choice
-base-image: ghcr.io/ublue-os/kionite-main
+base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 44
 
 platforms:
